@@ -18,12 +18,12 @@ public class FileMerger {
     public static final String SPEC = "spec";
     public static final String IN = "in";
 
-    public static void printResult(Map<String, Student> maps, List<String> listPeople) {
+    public static void printResult(Map<String, Student> maps, List<String> listPeople, String nameResult) {
         FileWriter fileWriter= null;
 
         //Write a new student object list to the CSV file
         try {
-            fileWriter = new FileWriter("C:\\Coding\\Java\\FileWorker\\files\\result.csv");
+            fileWriter = new FileWriter(nameResult);
             for (String man : listPeople) {
                 Student st = maps.get(man);
                 fileWriter.append(man);
